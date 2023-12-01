@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Source+Code+Pro:wght@300;400&display=swap');
+
+@font-face {
+  font-family: "Clash Display";
+  src: url(/font/ClashDisplay-Variable.ttf);
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: max-content;
+  background-color: #0d1117;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.wrapper{
+  max-width: 1600px;
+  width: 100%;
+  color: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bg-hero {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-hero::before {
+  height: 100%;
+  width: 100%;
+  --grid-color: #2f353c;
+  --bg-color: #0d1117;
+  --grid-size: 24px;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--bg-color) calc(var(--grid-size) - 2px), transparent 1%) 50%, linear-gradient(var(--bg-color) calc(var(--grid-size) - 2px), transparent 1%) 50%, var(--grid-color);
+  background-position-x: center;
+  background-position-y: center;
+  background-size: var(--grid-size) var(--grid-size);
+  -webkit-mask-image: linear-gradient(0deg, transparent 5%, #000);
+  mask-image: linear-gradient(0deg, transparent 5%, #000);
+}
+
+.logo span {
+  color: rgba(220, 20, 60, 0.796);
+}
+
+.logo {
+  font-family: "Clash Display";
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.logo h3,
+.logo h4 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+nav {
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  overflow-x: hidden;
+}
+
+.goback-btn{
+  height: 35px;
+}
+
+/* SPONSORSHIP */
+
+.why_sponsor{
+  display: flex;
+  height: max-content;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.why_sponsor h1{
+  font-family: "Clash Display";
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #dc143ccb;
+  text-align: center;
+}
+
+
+.why_sponsor h3{
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  width: 50%;
+  text-align: center;
+  align-self: center;
+}
+
+.sponsorship_levels{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+  "explore_tier innovator_tier visionary_tier pioneer_tier";
+}
+
+.explore_tier { 
+  grid-area: explore_tier;
+}
+
+.innovator_tier { 
+  grid-area: innovator_tier; 
+}
+
+.innovator_tier a{
+  background-color: #f6b8a5;
+}
+
+.visionary_tier {
+  grid-area: visionary_tier; 
+}
+
+.visionary_tier a{
+  background-color: #f1e170;
+}
+
+.pioneer_tier { 
+  grid-area: pioneer_tier;
+}
+
+.pioneer_tier a{
+  background-color: #b2132c;
+}
+
+
+.explore_tier, .innovator_tier, .visionary_tier, .pioneer_tier{
+  background-color: #161b22;
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 10px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  min-height: 27.9375rem;
+}
+
+.container p{
+  font-family: "Clash Display"; 
+  color: #666666;
+  font-size: small;
+}
+
+.container h2{
+  font-family: "Clash Display";
+  font-weight: 500;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  height: max-content;
+  margin: 5px;
+  width: 100%;
+}
+
+h2 svg{
+  height: 30px;
+}
+
+ul{
+  font-family: 'Source Code Pro', monospace;
+  list-style: none;
+  font-weight: 300;
+  font-size: 0.84rem;
+}
+
+
+ul li{
+  list-style-image: url(/img/ticksvg.svg);
+  background-repeat: no-repeat;
+}
+
+.tier-btn{
+  position: absolute;
+  bottom: 10px;
+  width: calc(100% - 30px);
+  text-align: center;
+  background-color: aliceblue;
+  margin: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: "Clash Display";
+  font-size: large  ;
+  text-decoration: none;
+  color: #0d1117;
+  font-weight: 500;
+}
+
+/* CONTACT FORM */
+.contact-us{
+  display: flex;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5rem;
+  height: 90vh;
+}
+
+.contact-us h1{
+  font-family: "Clash Display";
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+}
+
+form{
+  /* margin-top: 48px; */
+  box-sizing: border-box;
+  padding: 1rem;
+  font-family: "Clash Display";
+  font-weight: 500;  
+  line-height: 4;
+  letter-spacing: 2px;
+  text-align: center;
+  user-select: none;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+form input{
+  font-weight: 200 ;
+  font-family: 'Source Code Pro', monospace;
+  text-transform: uppercase;
+}
+
+form input, form select{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid aliceblue;
+  color: aliceblue;
+  text-align: center;
+  width: 22vw;
+}
+
+form input:focus{
+  outline: none;
+}
+
+form input::placeholder{
+  color: rgba(240, 248, 255, 0.821);
+  text-transform: uppercase;
+}
+
+select:focus{
+  outline: none;
+}
+
+select option{
+  color: rgba(240, 248, 255, 0.821);
+  text-transform: uppercase;
+  background-color: #0d1117;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+  
+}
+
+select option:checked{
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 100;
+
+}
+
+form select {
+  font-family: 'Source Code Pro', monospace;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid aliceblue;
+  color: aliceblue;
+  text-align: center;
+  width: 22vw;
+  font-weight: 100;
+}
+
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  font-family: "Clash Display";
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  color: #0d1117;
+  border-radius: 5px;
+  font-size: 2.6rem;
+  padding: 1rem;
+}
+
+/* button::after {
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: aliceblue;
+  transition: width .24s ease-in-out;
+}
+
+button:hover::after {
+  width: 100%;
+} */
+
+footer {
+  background-color: aliceblue;
+  padding: 1rem 10rem 1rem 4rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer i,
+footer h1,
+footer a {
+  color: #0d1117;
+  font-family: 'Source Code Pro', monospace;
+}
+
+footer h1 {
+  font-size: 0.9rem;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+footer ul li{
+  list-style: none;
+}
+
+footer a{
+  text-decoration: none;
+}
+
+.fyi_logo {
+  height: 64px;
+  width: auto;
+}
+
+@media only screen and (max-width: 750px) {
+  .why_sponsor{
+    padding: 1rem;
+  }
+
+  .why_sponsor h3{
+    width: 100%;
+  }
+
+  .container {
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "explore_tier"
+      "innovator_tier"
+      "visionary_tier"
+      "pioneer_tier";
+    gap: 10px 10px;
+  }
+
+  .contact-us{
+    padding: 1rem;
+  }
+
+  form{
+    padding: 0rem;
+    font-size: 1rem;
+  }
+
+  button{
+    font-size: 1.3rem;
+  }
+
+  .content{
+    font-size: 01rem;
+  }
+
+  .content input{
+    min-width: 200px;
+  }
+
+  button{
+    padding: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-us h1{
+    margin-top: 48px;
+    font-size: 1.3rem;
+  }
+
+  footer {
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    width: 100%;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 4px 4px 0 0;
+  }
+
+  footer img {
+    filter: grayscale();
+  }
+
+  footer h1 {
+    display: none;
+  }
+
+  footer ul {
+    gap: 20px;
+    flex-direction: row;
+  }
+
+  .ri-xl {
+    font-size: 1rem;
+  }
+}
