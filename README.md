@@ -33,3 +33,15 @@ To run the website locally, follow these steps:
 2. Open the project folder:
    ```bash
    cd dungeon-of-developers
+
+## Hosting
+This website is hosted on Netlify, providing a fast and reliable platform for the hackathon. Visit Dungeon Of Developers to explore the live website.
+
+## Contributing
+If you'd like to contribute to the website, feel free to submit a pull request. Whether it's fixing a bug, adding a new feature, or improving documentation, your contributions are welcome!
+
+## Contact
+If you have any questions or issues, please contact us at devrishisikka@gmail.com.
+
+Happy hacking, and may the best dungeon developer win! 🎉
+
