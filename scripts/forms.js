@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (goBackButton) {
     goBackButton.addEventListener('click', function () {
       // Navigate to a specific website when the button is clicked
-      window.location.href = 'https://dodtest.netlify.com'; // Replace with the desired URL
+      window.location.href = 'https://dungeonofdevelopers.netlify.com'; // Replace with the desired URL
     });
   }
 });

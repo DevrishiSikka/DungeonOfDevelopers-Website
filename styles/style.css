@@ -677,17 +677,31 @@ nav {
 
 .list {
   display: flex;
-  gap: 24px;
+  margin-right: 5px;
+  gap: 4px;
   font-family: "Clash Display";
+  align-items: center;
+  justify-content: center;
 }
 
 .list__item img {
-  width: 80%;
+  width: 70%;
   filter: grayscale() invert();
+}
+
+.polygon{
+  margin-left: 30px;
 }
 
 .become-spoonsor {
   margin-top: 24px;
+}
+
+#containerElem{
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 /* ACCORDIAN FAQ */
@@ -859,6 +873,15 @@ footer h1 a {
 
 .developers_break {
   display: none;
+}
+
+.addmore{
+  text-align: right;
+  font-size: 2rem;
+  width: 100%;
+  font-family: "Clash Display";
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 /* MEDIA QUERIES FOR SMALLER SCREENS */
@@ -1095,6 +1118,10 @@ footer h1 a {
     display: none;
   }
 
+  .addmore{
+    font-size: 1.2rem;
+    margin-top: 7px;
+  }
   /* SPONSORS MOBILE */
 
   .sponsors {
@@ -1107,11 +1134,18 @@ footer h1 a {
 
   .card-containers .list__item {
     min-width: 120px;
-    height: 120px;
+    height: 150px;
+    display: inline-block;
+    display: grid;
+    place-items: center;
   }
 
   .list {
-    gap: 12px;
+    /* margin-right: 5px;
+    gap: 5px; */
+    position: relative;
+    white-space: nowrap;
+    will-change: transform;
   }
 
   /* RULES */
