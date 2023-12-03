@@ -38,6 +38,14 @@ a {
   color: aliceblue;
 }
 
+.red{
+  color: #a71335;
+}
+
+.dubeat{
+  filter: invert() !important;
+}
+
 .wrapper {
   max-width: 1600px;
   width: 100%;
